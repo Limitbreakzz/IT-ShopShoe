@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Shoe</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <header class="bg-blue-600 text-white">
+        <div class="container mx-auto px-6 flex items-center justify-between py-4">
+            <!-- Logo -->
+            <div class="flex items-center space-x-4">
+                <img src="im/5.png" alt="Logo" class="w-10 h-10">
+                <div class="text-xl font-bold">IT Shop Shoe</div>
+            </div>
+
+            <!-- ปุ่ม Hamberger Menu -->
+            <button id="menu-toggle" class="block lg:hidden focus:outline-none">
+                <!-- Toggler Icon -->
+                <span class="navbar-toggler-icon block w-6 h-0.5 bg-white mb-1"></span>
+                <span class="navbar-toggler-icon block w-6 h-0.5 bg-white mb-1"></span>
+                <span class="navbar-toggler-icon block w-6 h-0.5 bg-white"></span>
+            </button>
+
+            <!-- Navigation Menu (Desktop) -->
+            <nav class="hidden lg:flex space-x-6">
+                <a href="index.html"
+                    class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Home</a>
+                <a href="Promotion.html"
+                    class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Promotion</a>
+                <a href="Product.html"
+                    class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Product</a>
+                <a href="contact.html"
+                    class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Contact</a>
+            </nav>
+        </div>
+
+        <!-- Navigation Menu (Mobile) -->
+        <nav id="mobile-menu" class="hidden flex flex-col space-y-2 bg-blue-600 lg:hidden px-6 py-4">
+            <a href="index.html"
+                class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Home</a>
+            <a href="Promotion.html"
+                class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Promotion</a>
+            <a href="Product.html"
+                class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Product</a>
+            <a href="contact.html"
+                class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Contact</a>
+        </nav>
+
+
+
+
+    </header>
+
+    <div id="hamberger-menu" class="md-hidden bg-blue-600 text-white py-4 hidden">
+        <nav class="flex flex-col space-y-4 px-6">
+            <a href="index.html"
+                class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Home</a>
+            <a href="Promotion.html"
+                class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Promotion</a>
+            <a href="Product.html"
+                class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Product</a>
+            <a href="contact.html"
+                class="hover:bg-blue-300 hover:text-blue-900 px-4 py-2 rounded transition duration-300">Contact</a>
+        </nav>
+    </div>
+
+    <script>
+        const hambergerButton = document.getElementById('hamberger');
+        const hambergerMenu = document.getElementById('hamberger-menu');
+
+        hambergerButton.addEventListener('click', () => {
+            hambergerMenu.classList.toggle('hidden');
+        })
+
+    </script>
+
+    <!-- Product -->
+    <section class="container mx-auto px-6 my-8">
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+
+            <!-- Product 1 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="im/chang.png" alt="Product 1" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Changdao</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-blue-600">฿39.00</span>
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!--products 2 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="im/air-jordan.jpg" alt="Product 2" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Jordan 1 RetroLow Travis Scott Mocha</h3>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-blue-600">฿19,999.00</span>
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 3 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="im/NIke-jordan.jpg" alt="Product 3" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Nike Jordan 1 Retro High </h3><br>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-blue-600">฿29,900.00</span>
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 4 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="im/superstar.png" alt="Product 4" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">adidas Superstar Cloud White Core Black</h3><br>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-blue-600">฿1,499.00</span>
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 5 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="im/ninew.jpg" alt="Product 6" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">NIKE W VICTORI ONE SLIDE</h3><br>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-blue-600">฿1,090.00</span>
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 6 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="im/niair.jpg" alt="Product 7" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">NIKE W AIR MAX MOTION 2</h3><br>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-blue-600">฿2,690.00</span>
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 7 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="im/ni1.jpg" alt="Product 10" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">NIKE AIR FORCE 1 MID REACT</h3><br>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-blue-600">฿3,499.00</span>
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 8 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="im/nip.jpg" alt="Product 11" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Nike Dunk Hi</h3><br>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-blue-600">฿2,799.00</span>
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 9-->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="im/van.png " alt="Product 12" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Vans Old Skool</h3><br>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-blue-600">฿2,690.00</span>
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 10-->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="im/promo1.png " alt="Product 13 class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Globe Mahalo Warm Grey Woven Skateboard Shoes</h3><br>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-blue-600">฿479.00</span>
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 11 -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="im/promo3.png " alt="Product 14" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">air jordan 1 mid men's basketball shoes - white</h3><br>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-blue-600">฿4,900.00</span>
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Product 12-->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden">
+                <img src="im/promo2.png " alt="Product 15" class="w-full h-40 object-cover">
+                <div class="p-4">
+                    <h3 class="text-lg font-semibold mb-2">Nike Dunk Low</h3><br>
+                    <div class="flex items-center justify-between">
+                        <span class="text-xl font-bold text-blue-600">฿3,790.00</span>
+                        <button
+                            class="px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition duration-300">Buy
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+    <!-- Footer Section -->
+    <footer class="bg-blue-600 text-white">
+        <div class="container mx-auto px-6 py-10">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+                <!-- About Us -->
+                <div>
+                    <img src="im/5.png" alt="Logo" class="w-24 h-30"><br>
+                    <p class="text-sm text-gray-200">
+                        IT Shop Shoe สามารถซื้อสินค้าได้ตลอดเวลา 24 ชั่วโมง ทุกที่ ทุกเวลา ทั้งโทรศัพท์ และ PC
+                    </p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+                    <ul class="space-y-2">
+                        <li><a href="index.html" class="hover:text-blue-300">Home</a></li>
+                        <li><a href="Promotion.html" class="hover:text-blue-300">Promotion</a></li>
+                        <li><a href="Product.html" class="hover:text-blue-300">Products</a></li>
+                        <li><a href="contact.html" class="hover:text-blue-300">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+                    <ul class="space-y-2">
+                        <li><span class="font-semibold">Phone:</span> 083 299 5132</li>
+                        <li><span class="font-semibold">Email:</span> itshopshoe@gmail.com</li>
+                        <li><span class="font-semibold">Facebook:</span> IT-ShopShoe </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Bottom Section -->
+            <div class="mt-8 border-t border-gray-400 pt-6 text-center">
+                <p class="text-sm text-gray-300">
+                    &copy; 2024 ITShopShoe. All rights reserved.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- JavaScript สำหรับ Hamburger Menu -->
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("hidden");
+        });
+    </script>
+
+</body>
+
+</html>
